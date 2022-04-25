@@ -1,0 +1,103 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  width: 100vw;
+  height: 100vh;
+}
+
+body{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  background-image:url(https://media.istockphoto.com/photos/rocky-mountain-state-park-lake-reflections-picture-id1294369392?b=1&k=20&m=1294369392&s=170667a&w=0&h=_bYBRAK8PzK9NFNNudpa0bmjANUVKEA7x07was0GZz0=);
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased; 
+}
+
+.blurred-box{
+  position: relative;
+  width: 650px;
+  height: 650px;
+  top: calc(50% - 320px);
+  left: calc(50% - 325px);
+  background: inherit;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.blurred-box:after{
+  content: '';
+  width: 800px;
+  height: 650px;
+  background: inherit; 
+  position: absolute;
+  left: -25px;
+  right: 0;
+  top: -25px;
+  bottom: 0;
+  box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+  filter: blur(10px);
+}
+
+.chatbot{
+  position: relative;
+  margin-top: 50px;
+  text-align: center;
+  z-index: 1;
+}
+.chatbot > *{
+  display: inline-block;
+  width: 600px;
+  color: white;
+}
+
+.chat-view {
+  height: 450px;
+  padding: 1rem;
+  max-height: 80%;
+  margin-top: 20px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.bot-container,
+.your-container {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  animation: fadeIn 0.5s ease-in-out;
+}
+  
+.bot-msg {
+  float: left;
+  background-color: rgb(250, 85, 241);
+  color: #fff;
+  border-radius: 0px 20px 20px 20px;
+  padding: 15px;
+  width: 70%;
+  text-align: left;
+}
+  
+.your-msg {
+  float: right;
+  width: auto;
+  background-color: rgb(86, 79, 255);
+  color: white;
+  border-radius: 20px 0px 20px 20px;
+  padding: 15px;
+  width: 60%;
+  text-align: right;
+}
+
+.form-floating {
+  color: black;
+}
